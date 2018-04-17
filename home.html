@@ -1,0 +1,155 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" href="second.css">
+</head>
+<body>
+<div id="new">
+<header>
+
+<h1><b>First Lady Beauty Salon</b></h1>
+
+</header>
+
+<div class="fron">
+<center>
+<a href=""><input type="button" value="Home" onclick="document.getElementById('new').innerHTML"/></a>
+	<input type="button" value="Services" onclick="serve()"  />
+	<input type="button" value="Address & info" onclick="addrs()"/>
+	
+	
+	<a href="tel:+918095679072 "><input type="button" value="Call"/></button></a>
+	<a href="https://www.google.com/maps/place/First+Lady+Beauty+Centre/@12.3420987,76.6516224,17z/data=!4m12!1m6!3m5!1s0x3baf708f4e954c71:0x5e7d2109f849a440!2sFirst+Lady+Beauty+Centre!8m2!3d12.3420987!4d76.6538111!3m4!1s0x3baf708f4e954c71:0x5e7d2109f849a440!8m2!3d12.3420987!4d76.6538111"><input type="button" value="Map"/></a>
+ 
+	<p> Welcome!! First Lady beauty salon dedicated to consistently providing high customer satisfaction by rendering excellent service, quality products, and furnishing an enjoyable ambience at an acceptable price/value relationship. We offer salonic service for women and childrens with qualified and disciplined staff. Open <mark>All Days</mark> , So come visit us and experience a new look and feel !! </p></center>
+	
+</div>
+<div id="im">
+<center>
+	<img src="one.jpg" alt="First Lady Beauty Parlor" id="mainImage" height="340px" width="433px" style="border:3px solid black;" />
+	<br/>
+	<div id="myDiv" onclick="changeImage(event)">
+	<img class="imgStyle" src="one.jpg" title="makeup"/>
+	<img class="imgStyle" src="two.jpg" title="facial"/>
+	<img class="imgStyle" src="three.jpg" title="Hair Coloring"/>
+	<img class="imgStyle" src="four.jpg" title="Hair Styling"/>
+	<img class="imgStyle" src="five.jpg" title="Manicure and Padicure"/>
+	<img class="imgStyle" src="six.jpg" title="Bridal Makeup"/>
+	</div>
+	<center>
+</div>
+</br>
+<div id="popular">
+	<div id="service">
+	<center>
+	<nav>
+        <h1> <i>Service:</i></h1>
+        
+        <ul>
+  
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Facial</a>
+    <div class="dropdown-content">
+      <a href="#">Shehnaz</a>
+      <a href="#">Perl</a>
+      <a href="#">Gold</a>
+    </div>
+  </li>
+  <br>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Hair Coloring</a>
+    <div class="dropdown-content">
+      <a href="#">Matrix</a>
+      <a href="#">Loreal</a>
+     
+    </div>
+  </li>
+  <br>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Waxing</a>
+    <div class="dropdown-content">
+      <a href="#">Hands</a>
+      <a href="#">Legs</a>
+      <a href="#">Body</a>
+    </div>
+  </li>
+  <li> Hair Styling </li>
+   <li> Hair Care Treatment</li>
+   <li> Manicure and Padicure </li>
+   <li> Bridal Makeup </li>
+   <li> Home Makeup Service</li>
+</ul>
+
+    </nav>
+    </center>
+    </div>
+    <div id="dd">
+    <center>
+    <article>
+	<address>
+	<h1> Address: </h1>
+	<pre>
+		First Lady Beauty Parlor,
+		Bannimantap A Layout, 
+		Bannimantap, Mysuru,
+		Karnataka 570015, India.
+	</pre>
+		<p id="phone"><h1>Phone.no:</h1> +91 80-95-679072</br></p>
+		<p id="hours"><h1>Hours:</h1> 11AM-8PM (All days) </p>
+	</address>
+	</article>
+	</center>
+	</div>
+</div>
+	<footer>
+		Copyright@nishad.
+	</footer>
+	</div>
+	
+	</body>
+	
+<script>
+
+  var images = document.getElementById("myDiv").getElementsByTagName("img");
+
+  for(var i=0;i<images.length;i++)
+  {
+
+    images[i].onmouseover = function(){
+      this.style.cursor = "hand";
+      this.style.borderColor="gray";
+    }
+    images[i].onmouseout = function(){
+      this.style.cursor = "pointer";
+      this.style.borderColor="purple";
+    }
+  }
+function changeImage(event)
+{
+
+  event = event || window.event;
+  var targetElement = event.target || event.srcElement;
+
+if (targetElement.tagName == "IMG")
+{
+    document.getElementById("mainImage").src = targetElement.getAttribute("src");
+}
+
+}
+
+
+function addrs()
+{
+var address = document.getElementById("dd").innerHTML;
+document.getElementById("im").innerHTML= address;
+
+}
+
+function serve()
+{
+	var service = document.getElementById("service").innerHTML;
+  document.getElementById("im").innerHTML= service;
+}
+</script>	
+</html>
